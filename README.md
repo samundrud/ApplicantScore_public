@@ -1,7 +1,9 @@
 # ApplicantScore
 ___Fast Track Top Talent___
 
-This consulting project was completed as part of the Insight Data Science Fellowship program (New York, YN, Summer 2020) by Sarah Amundrud
+This consulting project was completed as part of the Insight Data Science Fellowship program (New York, YN, Summer 2020) by Sarah Amundrud.
+
+This is the public repository of the project, which does not include any data.
 
 
 # Table of Contents
@@ -14,20 +16,17 @@ This consulting project was completed as part of the Insight Data Science Fellow
  
  
 # Introduction
-My client, a tech company that hires people across several domains, recieves more than 12.000 applications a year for less than 1000 open positions across seven sectors.
-Processing and ranking applications manually not only results in a significant cost in terms of time, but it also means that it can take up to several weeks to respond to applicants. 
-In order to reduce the processing time of applications, I used machine learning and natural language processing (NLP) to develop an algorithm that scores and ranks applications, thus allowing my client to prioritize high quality applications for further processing along with significantly cutting down on time spent ranking the applications manually. 
+My client, a tech company that hires people across several tech domains (e.g., data science, data engineering, etc.), receives more than 12,000 applications a year for less than 1,000 open positions.
+Processing and ranking applications manually can take several weeks, resulting in a slow response rate to applicants. 
+To help my client reduce their application processing time and respond to top applicants in days rather than weeks (i.e., for interview requests), I used machine learning and natural language processing (NLP) to develop an algorithm that scores and ranks applications, thus allowing my client to prioritize and fast track high quality applications. In addition to significantly speeding up the response time, my product saves my client roughly 2000h/year in manual processing and ranking of applications. 
 
 # Data
-I obtained 3600 job applications that were labeled as either no (the application was rejected during the first round of review) or Yes+ (the application went on to the next stage). What made this task challenging is that the applications consisted almost entirely of unstructured data; namely, the applicants answers to a variety of application questions, ranging from describing their education and professional background, domain knowledge, industry specific skills, along what motivated them to apply for the position. 
+I obtained 3,600 job applications that were labeled as either no (the application was rejected during the first round of review) or Yes+ (the application went on to the next stage). The applications consisted almost entirely of unstructured data; namely, the applicants answers to a variety of application questions, ranging from describing their education and professional background, domain knowledge, industry specific skills, along what motivated them to apply for the position. 
 
  
 # Approach
-I trained five logistic regression machine learning models that ranks unstructured text based job applications.
-Because of the compact and often technical nature of the answers, I decided on employing an approach to feature engineering that was largely based on domain knowledge and targeted searches for certain keywords. After discussions with several hiring managers, I came up with close to 200 keywords that were potentially important in predicting whether or not an application was making it to the next round (namely the interview). This process resulted in a dataset of almost 200 features that included keywords relevant to relevant background, required skills, and domain knowledge. 
-
-
-
+I trained five logistic regression models (one for each of five tech domains my client is involved in) that ranks unstructured text based job applications.
+From the text based answers to application questions, I engineered features using a targeted keyword extraction approach that was based on detailed discussions with hiring managers who have deep domain knowledge. The resulting features were related to an applicant's relevant background, required skills, as well as domain knowledge. 
 
 
 
@@ -63,5 +62,5 @@ As this project contains confidential information (i.e., applications to the Ins
 
 * __5_Domain_Model_DO.ipynb__ - Model for DevOps
 
-
+* __Models__ - Folder containing models and features for the various domains
 
